@@ -7,7 +7,7 @@
 
 with source as(
 
-select distinct CITY,COUNTRY,STATE,ZIPCODE,COUNTY,TIMEZONE,AIRPORT_CODE,STREET,_MODIFIED from {{source('DEVELOPER_DB','US_ACCIDENT_TABLE') }}),
+select distinct CITY,COUNTRY,STATE,ZIPCODE,COUNTY,TIMEZONE,AIRPORT_CODE,STREET,_MODIFIED from {{source('DEVELOPER_DB','CONVERT_DATE') }}),
 
 source_data_dimention as (
 
