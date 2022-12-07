@@ -5,5 +5,5 @@ sources:
     database: DEVELOPER_DB
     schema: TIRUPATHIRAO_SCHEMA
     tables:
-      - name: US_ACCIDENT_STAGE_INCREMENTAL_TABLE
+      - name: ACCIDENT_TABLE_INCREMENTAL
       - name: CONVERT_DATE
