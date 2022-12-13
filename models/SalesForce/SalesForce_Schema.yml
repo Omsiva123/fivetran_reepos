@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: DEVELOPER_DB
+    database: DEVELOPER_DB
+    schema: TIRUPATHIRAO_SCHEMA
+    tables:
+      - name: PRODUCT_2
+      - name: ORDER
+      - name: LEAD
+      - name: ACCOUNT
+      - name: CAMPAIGN
+      - name: OPPORTUNITY
+      - name: CONTRACT
+      - name: CONTACT
+      - name: CASE
+      - name: ORDER_ITEM
