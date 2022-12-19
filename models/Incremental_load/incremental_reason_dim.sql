@@ -1,13 +1,9 @@
-{{
-    config(
-        materialized='incremental'
-    )
-}}
+{{config(materialized='incremental')}}
 
 with source_2 as(
 
 select distinct AMENITY,BUMP,CROSSING,GIVE_WAY,JUNCTION,NO_EXIT,RAILWAY,ROUNDABOUT,STATION,
-STOP,TRAFFIC_CALMING,TRAFFIC_SIGNAL,TURNING_LOOP,_MODIFIED  from {{source('DEVELOPER_DB','CONVERT_DATE') }}),
+STOP,TRAFFIC_CALMING,TRAFFIC_SIGNAL,TURNING_LOOP,_MODIFIED  from {{source('DEVELOPER_DB','INCREMENTAL_US_ACCIDENT_STAGE_TABLE') }}),
 
 source_data_dimention_2 as (
 

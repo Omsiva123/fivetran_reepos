@@ -1,13 +1,9 @@
-{{
-    config(
-        materialized='incremental'
-    )
-}}
+{{config(materialized='incremental')}}
 
 
 with source_1 as(
 
-select distinct SUNRISE_SUNSET,CIVIL_TWILIGHT,NAUTICAL_TWILIGHT,ASTRONOMICAL_TWILIGHT,_MODIFIED from {{source('DEVELOPER_DB','CONVERT_DATE') }}),
+select distinct SUNRISE_SUNSET,CIVIL_TWILIGHT,NAUTICAL_TWILIGHT,ASTRONOMICAL_TWILIGHT,_MODIFIED from {{source('DEVELOPER_DB','INCREMENTAL_US_ACCIDENT_STAGE_TABLE') }}),
 
 source_data_dimention_1 as (
 
